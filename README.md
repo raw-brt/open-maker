@@ -6,7 +6,7 @@ It is based on the last version of [Casper](https://github.com/TryGhost/Casper) 
 
 The opt-in form is optimized to be used with Mailchimp. You can see where to put your email list path with a comment in the index.hbs file.
 
-Also, the subscribe button that you can see in the navbar is designed to redirect to a newsletter page. This way, you can develop whatt's in for your subscribers and increase the probability of getting them onboard.
+Also, the subscribe button that you can see in the navbar is designed to redirect to a newsletter page. This way, you can develop what's in for your subscribers and increase the probability of getting them onboard.
 
 You can see a demo of the theme at [makersway.io](https://makersway.io).
 
