@@ -1,10 +1,18 @@
 # Open Maker
 
-Free Ghost theme to help you build your subscriber list with a clean and modern reading experience.
+Free [Ghost](http://github.com/tryghost/ghost/) theme to help you build your subscriber list with a clean and modern reading experience.
 
 It is based on the last version of [Casper](https://github.com/TryGhost/Casper) and inspired by John O'Nolan's [Rediverge blog](https://rediverge.com/).
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+The opt-in form is optimized to be used with Mailchimp. You can see where to put your email list path with a comment in the index.hbs file.
+
+Also, the subscribe button that you can see in the navbar is designed to redirect to a newsletter page. This way, you can develop whatt's in for your subscribers and increase the probability of getting them onboard.
+
+You can see a demo of the theme at [makersway.io](https://makersway.io).
+
+Hope you like it!
+
+Made with love by [Roberto Díaz](https://robertodiaz.io)
 
 &nbsp;
 
