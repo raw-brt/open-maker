@@ -1,0 +1,142 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<div class="site-spacer"></div>
+
+<header class="site-home-header" id="header">
+    <div class="inner">
+        {{> "site-nav"}}
+    </div>
+</header>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+
+    <div class="hero-wrapper">
+        <div class="container">
+            <div class="hero">
+                <h1 class="hero-title">Free Ghost theme to help you build your subscriber list with a clean and modern reading experience</h1>
+                <div class="hero-sub">
+                    <p class="hero-subtitle">A Ghost Theme optimized for subscriptions to help you start publishing and building your subscriber list from the very beginning.</p>
+                </div>
+
+                <div class="hero-grid">
+                    <div class="hero-grid-item">
+                        <img class='hero-grid-image' src='assets/envelope.svg'/>
+                        <h4>Optimized for newsletters</h4>
+                        <p>Following the best practices in the industry to optimize conversions.</p>
+                    </div>
+                    <div class="hero-grid-item">
+                        <img class='hero-grid-image' src='assets/bookmark.svg'/>
+                        <h4>Focus on your content</h4>
+                        <p>A clean and modern reading experience to keep your audience focused and engaged.</p>
+                    </div>
+                    <div class="hero-grid-item">
+                        <img class='hero-grid-image' src='assets/edit.svg'/>
+                        <h4>Make it yours</h4>
+                        <p>Designed and built for you to tweak it to reflect the style and values of your brand.</p>
+                    </div>
+                </div>
+
+                <!-- Begin Mailchimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <!-- Insert in the action attribute value the link of your Mailchimp List -->
+                    <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        <div class="newsletter-copy">
+                            <p class="newsletter-uvp"><strong>Signup for your awesome newsletter</strong></p>
+                        </div>
+                        {{!-- <label for="mce-EMAIL"></label> --}}
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <!-- Insert in the name attribute value the one provided by Mailchimp in their signup form -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+
+    <!--End mc_embed_signup-->
+                <div class="hero-learn-more">
+                    <a href="#">Learn more</a>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+
+    <div class="inner posts">
+
+        <div class="post-feed">
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+    </div>
+</main>
+
+{{> site-header}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+
+    // NOTE: Scroll performance is poor in Safari
+    // - this appears to be due to the events firing much more slowly in Safari.
+    //   Dropping the scroll event and using only a raf loop results in smoother
+    //   scrolling but continuous processing even when not scrolling
+    $(document).ready(function () {
+        
+        var nav = document.querySelector('.site-nav-main .site-nav');
+        var feed = document.querySelector('.post-feed');
+
+        var lastScrollY = window.scrollY;
+        var lastWindowHeight = window.innerHeight;
+        var lastDocumentHeight = $(document).height();
+        var ticking = false;
+
+        function onScroll() {
+            lastScrollY = window.scrollY;
+            requestTick();
+        }
+
+        function onResize() {
+            lastWindowHeight = window.innerHeight;
+            lastDocumentHeight = $(document).height();
+            requestTick();
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(update);
+            }
+            ticking = true;
+        }
+
+        function update() {
+            var trigger = feed.getBoundingClientRect().top + window.scrollY;
+            var progressMax = lastDocumentHeight - lastWindowHeight;
+
+            // show/hide nav
+            if (lastScrollY >= trigger - 20) {
+                nav.classList.add('fixed-nav-active');
+            } else {
+                nav.classList.remove('fixed-nav-active');
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onResize, false);
+
+        update();
+
+    });
+</script>
+{{/contentFor}}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="34px" viewBox="0 0 252 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Maker's Way Imagotipo</title>
+    <g id="Imagotipo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Maker's-Way-Imagotipo" transform="translate(3.000000, 1.000000)">
+            <g id="Isotipo-1.2" transform="translate(0.000000, 2.000000)" stroke="#E9FF03" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+                <path d="M5.68434189e-14,14 C1.67038364,25.5507587 3.67038364,29.884092 6,27 C9.49442454,22.673862 11.8660497,0 16.9184629,0 C21.9708762,0 21.6854836,23.753911 26.6691219,24 C31.6527601,24.246089 31.9194767,0 37.1698315,0 C40.670068,0 44.2801242,8.66666667 48,26 C52,19 53.5170714,3.96627776 58.5007096,4.21236672 C63.4843478,4.45845568 63.1989553,27.2123667 68.2513685,27.2123667 C73.3037818,27.2123667 76.5041563,7.42473344 78.7520781,0.212366722" id="Path"></path>
+            </g>
+            <text id="Maker’s-Way" font-family="NotoSans-Bold, Noto Sans" font-size="23" font-weight="bold" letter-spacing="0.139552157" fill="#FFFFFF">
+                <tspan x="99.3584397" y="25">Maker’s Way</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

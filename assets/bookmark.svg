@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="75px" viewBox="0 0 57 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bookmark</title>
+    <g id="Open-Maker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bookmark" fill="#002737" fill-rule="nonzero">
+            <path d="M49.21875,0 L7.03125,0 C3.14794922,0 0,3.14794922 0,7.03125 L0,75 L28.125,58.59375 L56.25,75 L56.25,7.03125 C56.25,3.14794922 53.1020508,0 49.21875,0 Z M49.21875,62.7583008 L28.125,50.4536133 L7.03125,62.7583008 L7.03125,7.91015625 C7.03125,7.42474973 7.42474973,7.03125 7.91015625,7.03125 L48.3398438,7.03125 C48.825293,7.03125 49.21875,7.42426758 49.21875,7.90957031 L49.21875,62.7583008 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
